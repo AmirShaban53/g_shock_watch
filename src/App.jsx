@@ -3,13 +3,15 @@ import NavBar from "./components/navbar";
 
 import Hero from "./components/hero";
 import Features from "./components/features";
+import Rugged from "./components/rugged";
 
 function App() {
   return (
     <>
       <NavBar />
       <Hero />
-      <Features/>
+      <Rugged />
+      <Features />
     </>
   );
 }

@@ -4,7 +4,7 @@ import { Container } from "./layout";
 
 const Hero = () => {
   return (
-    <div className="h-screen justify-center items-center gap-12 relative overflow-hidden">
+    <div className="h-screen bg-gray-100 justify-center items-center gap-12 relative overflow-hidden">
       <WatchRotation />
       <Container>
         <div className="flex flex-col justify-center w-2/5 text-white h-screen gap-8">
