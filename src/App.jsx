@@ -5,6 +5,7 @@ import Hero from "./components/hero";
 import Rugged from "./components/rugged";
 import Features from "./components/features";
 import Carousel from "./components/carousel";
+import HolyGaril from "./components/holyGrail";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Rugged />
       <Features />
       <Carousel/>
+      <HolyGaril/>
     </>
   );
 }

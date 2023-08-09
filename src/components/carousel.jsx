@@ -27,12 +27,18 @@ const Carousel = () => {
 
   return (
     <div className="h-screen">
-      <div className="relative h-96 w-96 mx-auto per my-12">
-        {items.map((data, index) => {
-          return <Card key={index} {...data} num={index} active={active} />;
-        })}
-        <Card />
-      </div>
+      <Container>
+        <div>
+          <p>Collection</p>
+          <p>Lorem ipsum dolor sit amet consectetur</p>
+        </div>
+        <div className="relative h-96 w-96 mx-auto per my-12">
+          {items.map((data, index) => {
+            return <Card key={index} {...data} num={index} active={active} />;
+          })}
+          <Card />
+        </div>
+      </Container>
     </div>
   );
 };

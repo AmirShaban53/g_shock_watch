@@ -24,62 +24,57 @@ function NavBar() {
   return (
     <div>
       <nav
-        className={`fixed top-0 w-full transition duration-700 z-40 ${
-          navBg ? `bg-zinc-950 text-zinc-300 shadow` : ` text-zinc-300`
+        className={`absolute top-0 w-full transition duration-700 z-40 ${
+          navBg ? `` : ``
         } ${mobileNav && "bg-zinc-950 text-black"}`}
       >
-        <Container>
-          <div className="justify-between mx-auto lg:max-w-7xl md:items-center md:flex">
-            <div>
-              <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                <a href="#home">
-                  <p className="text-xl md:text-3xl font-bold ">
-                    G-SHOCK
-                  </p>
-                </a>
-                <div className="md:hidden">
-                  <button
-                    className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-                    onClick={() => setNavbar(!navbar)}
-                  >
-                    {/* <Dehaze /> */}
-                    menu
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div
-                className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                  navbar ? "p-12 md:p-0 block" : "hidden"
-                }`}
-              >
-                <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                  <li className=" text-xl py-4 md:px-6 text-center border-b-2 md:border-b-0  border-white  md:hover:text-rose-500 hover:font-bold">
-                    <a href="#history" onClick={() => setNavbar(!navbar)}>
-                      History
-                    </a>
-                  </li>
-                  <li className="text-xl py-4 px-6 text-center  border-b-2 md:border-b-0 border-white  md:hover:text-rose-500 hover:font-bold">
-                    <a href="#showcase" onClick={() => setNavbar(!navbar)}>
-                      Showcase
-                    </a>
-                  </li>
-                  <li className=" text-xl py-4 px-6 text-center  border-b-2 md:border-b-0 border-white md:hover:text-rose-500 hover:font-bold">
-                    <a href="#process" onClick={() => setNavbar(!navbar)}>
-                      Process
-                    </a>
-                  </li>
-                  <li className=" text-xl py-4 px-6 text-center  border-b-2 md:border-b-0 border-white md:hover:text-rose-500 hover:font-bold">
-                    <a href="#actors" onClick={() => setNavbar(!navbar)}>
-                      Actors
-                    </a>
-                  </li>
-                </ul>
+        <div className="flex justify-between items-center">
+          <div className="ml-3 sm:ml-6 md:ml-12 lg:ml-28">
+            <div className="flex items-center justify-between md:block">
+              <a href="#home">
+                <p className="text-xl md:text-3xl font-bold ">G-SHOCK</p>
+              </a>
+              <div className="md:hidden">
+                <button
+                  className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                  onClick={() => setNavbar(!navbar)}
+                >
+                  {/* <Dehaze /> */}
+                  menu
+                </button>
               </div>
             </div>
           </div>
-        </Container>
+          <div className="bg-zinc-200 text-black">
+            <ul className="h-screen md:h-auto items-center justify-center md:flex space-x-4">
+              <li className="text-center p-4 hover:bg-blue-500 hover:text-white">
+                <a href="#history" onClick={() => setNavbar(!navbar)}>
+                  Features
+                </a>
+              </li>
+              <li className="text-center p-4 hover:bg-blue-500 hover:text-white">
+                <a href="#showcase" onClick={() => setNavbar(!navbar)}>
+                  Collection
+                </a>
+              </li>
+              <li className="text-center p-4 hover:bg-blue-500 hover:text-white">
+                <a href="#process" onClick={() => setNavbar(!navbar)}>
+                  Limited
+                </a>
+              </li>
+              <li className="text-center p-4 hover:bg-blue-500 hover:text-white">
+                <a href="#actors" onClick={() => setNavbar(!navbar)}>
+                  Actors
+                </a>
+              </li>
+              <li className="bg-blue-500">
+                <a href="#actors" onClick={() => setNavbar(!navbar)}>
+                  <img src="/shopping.png" className="h-14 p-3" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </div>
   );
