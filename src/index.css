@@ -18,12 +18,17 @@
   border: 1px solid red;
 }
 
-.radi {
+.bg-grad {
   background: radial-gradient(
-    closest-side at center,
-    rgba(37, 37, 37, 0.914),
-    rgb(29, 29, 29) 90%
-  );
+      circle at 35% 90%,
+      rgba(120, 255, 172, 0.5),
+      transparent 400px
+    ),
+    radial-gradient(
+      circle at 70% 50%,
+      rgba(255, 154, 100, 0.5),
+      transparent 400px
+    );
 }
 
 .watch-shadow {
@@ -44,4 +49,51 @@
     translateX(calc(var(--direction) * -5rem));
   filter: blur(calc(var(--abs-offset) * 0.5rem));
   transition: all 0.3s ease-out;
+}
+.animate-blob-1{
+  animation: blob1 15s infinite;
+}
+.animate-blob-2{
+  animation: blob2 15s 1s infinite;
+}
+
+@keyframes blob1 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(0px, -200px) scale(1);
+  }
+  66% {
+    transform: translate(150px, -200px) scale(1);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+@keyframes blob2 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(0px, 150px) scale(1);
+  }
+  66% {
+    transform: translate(-150px, 150px) scale(1);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@layer utilities{
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  .animation-delay-6000 {
+    animation-delay: 6s;
+  }
 }

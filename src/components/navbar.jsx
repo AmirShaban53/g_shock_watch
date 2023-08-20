@@ -36,7 +36,7 @@ function NavBar() {
               </a>
               <div className="md:hidden">
                 <button
-                  className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                  className="p-2  rounded-md outline-none focus:border-gray-400 focus:border"
                   onClick={() => setNavbar(!navbar)}
                 >
                   {/* <Dehaze /> */}
@@ -45,7 +45,7 @@ function NavBar() {
               </div>
             </div>
           </div>
-          <div className="bg-zinc-200 text-black">
+          <div className="bg-zinc-900 ">
             <ul className="h-screen md:h-auto items-center justify-center md:flex space-x-4">
               <li className="text-center p-4 hover:bg-blue-500 hover:text-white">
                 <a href="#history" onClick={() => setNavbar(!navbar)}>
